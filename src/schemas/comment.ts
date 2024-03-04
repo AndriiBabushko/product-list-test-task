@@ -2,9 +2,9 @@ import { z } from 'zod';
 
 export enum COMMENT_IDS {
   COMMENT_ID = 'id',
-  COMMENT_PRODUCT_ID = 'commentProductID',
-  COMMENT_DESCRIPTION = 'commentDescription',
-  COMMENT_DATE = 'commentDate',
+  COMMENT_PRODUCT_ID = 'productID',
+  COMMENT_DESCRIPTION = 'description',
+  COMMENT_DATE = 'date',
 }
 
 export const getCommentSchema = () =>

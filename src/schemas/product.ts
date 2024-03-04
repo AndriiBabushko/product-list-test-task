@@ -2,11 +2,11 @@ import { z } from 'zod';
 
 export enum PRODUCT_IDS {
   PRODUCT_ID = 'id',
-  PRODUCT_IMAGE_ID = 'productImage',
-  PRODUCT_NAME_ID = 'productName',
-  PRODUCT_COUNT_ID = 'productCount',
-  PRODUCT_SIZE_ID = 'productSize',
-  PRODUCT_WEIGHT_ID = 'productWeight',
+  PRODUCT_IMAGE_ID = 'imageUrl',
+  PRODUCT_NAME_ID = 'name',
+  PRODUCT_COUNT_ID = 'count',
+  PRODUCT_SIZE_ID = 'size',
+  PRODUCT_WEIGHT_ID = 'weight',
 }
 
 export const getProductSchema = () =>
