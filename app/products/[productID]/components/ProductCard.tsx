@@ -22,6 +22,9 @@ interface ProductCardProps {
 
 export const ProductCard: FC<ProductCardProps> = ({ productID }) => {
   const product = useAppSelector(selectProductById(productID));
+  const mainBoxBG = useColorModeValue('white', 'gray.800');
+  const commentBoxBG = useColorModeValue('gray.100', 'gray.700');
+  const commentBoxColor = useColorModeValue('gray.800', 'white');
 
   if (!product) {
     return <NoProductFound />;
@@ -34,7 +37,7 @@ export const ProductCard: FC<ProductCardProps> = ({ productID }) => {
         p={6}
         maxW={'330px'}
         w={'full'}
-        bg={useColorModeValue('white', 'gray.800')}
+        bg={mainBoxBG}
         boxShadow={'2xl'}
         rounded={'lg'}
         pos={'relative'}
@@ -105,8 +108,8 @@ export const ProductCard: FC<ProductCardProps> = ({ productID }) => {
                     borderWidth='1px'
                     borderRadius='md'
                     width='100%'
-                    bg={useColorModeValue('gray.100', 'gray.700')}
-                    color={useColorModeValue('gray.800', 'white')}
+                    bg={commentBoxBG}
+                    color={commentBoxColor}
                     fontWeight='bold'
                     mt='2'
                   >
