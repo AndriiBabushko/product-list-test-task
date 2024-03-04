@@ -9,7 +9,7 @@ export enum COMMENT_IDS {
 
 export const getCommentSchema = () =>
   z.object({
-    [COMMENT_IDS.COMMENT_ID]: z.number(),
+    [COMMENT_IDS.COMMENT_ID]: z.number().int(),
     [COMMENT_IDS.COMMENT_PRODUCT_ID]: z
       .number()
       .refine((value) => value !== undefined && value !== null, {

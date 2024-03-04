@@ -13,24 +13,25 @@ import {
 } from '@chakra-ui/react';
 
 interface MyModalProps {
+  modalTitle: string;
   isOpen: boolean;
   onClose: () => void;
   children: ReactNode;
 }
 
-export const MyModal: FC<MyModalProps> = ({ isOpen, onClose, children }) => {
+export const MyModal: FC<MyModalProps> = ({
+  modalTitle,
+  isOpen,
+  onClose,
+  children,
+}) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>My Modal</ModalHeader>
+        <ModalHeader>{modalTitle}</ModalHeader>
         <ModalCloseButton />
         <ModalBody>{children}</ModalBody>
-        <ModalFooter>
-          <Button colorScheme='blue' mr={3} onClick={onClose}>
-            Cancel
-          </Button>
-        </ModalFooter>
       </ModalContent>
     </Modal>
   );

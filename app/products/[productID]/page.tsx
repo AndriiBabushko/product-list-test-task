@@ -1,5 +1,7 @@
 'use server';
 
+import { ProductCard } from './components';
+
 interface ProductProps {
   params: {
     productID: number;
@@ -7,9 +9,5 @@ interface ProductProps {
 }
 
 export default async function Product({ params }: ProductProps) {
-  return (
-    <div>
-      <h1>Product {params.productID}</h1>
-    </div>
-  );
+  return <ProductCard productID={params.productID} />;
 }

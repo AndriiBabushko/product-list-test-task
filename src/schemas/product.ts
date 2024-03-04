@@ -13,6 +13,7 @@ export const getProductSchema = () =>
   z.object({
     [PRODUCT_IDS.PRODUCT_ID]: z
       .number()
+      .int()
       .refine((value) => Boolean(value), { message: 'Product ID is required' }),
     [PRODUCT_IDS.PRODUCT_IMAGE_ID]: z
       .string()

@@ -1,7 +1,7 @@
 'use client';
 
 import { Box, Table, Tbody, Th, Thead, Tr } from '@chakra-ui/react';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { ProductItem } from './ProductItem';
 
 interface ProductsListProps {

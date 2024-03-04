@@ -22,5 +22,5 @@ export const sortedProductsSelector = createSelector(
 
 export const selectProductById = (productId: number) =>
   createSelector(selectProducts, (products) =>
-    products.find((product) => product.id === productId)
+    products.find((product) => product.id == productId)
   );

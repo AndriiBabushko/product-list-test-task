@@ -1,10 +1,18 @@
-import Image from 'next/image';
+'use server';
 
-export default function Home() {
+import { Center, Box, Heading, Text } from '@chakra-ui/react';
+
+export default async function Home() {
   return (
-    <div>
-      <h1>Product list test task</h1>
-      <Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
-    </div>
+    <Center h='100vh'>
+      <Box p={4} textAlign='center'>
+        <Heading as='h1' mb={4}>
+          Welcome to Product list!
+        </Heading>
+        <Text>
+          This is a project created using Next.js, Redux Toolkit and Chakra UI.
+        </Text>
+      </Box>
+    </Center>
   );
 }
